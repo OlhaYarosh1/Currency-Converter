@@ -5,3 +5,61 @@
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+
+.currentRateBlock {
+    background-color: aqua;
+    width: 40%;
+    height: 40%;
+}
+
+.givenCurrencyBlock {
+    width: 50%;
+    height: 30%;
+    background-color: blue;
+}
+
+.returnedCurrencyBlock {
+    width: 50%;
+    height: 30%;
+    margin-left: 50%;
+    margin-top: -114px;
+    background-color: violet;
+}
+
+select {
+    width: 20%;
+    height: 30px;
+    background-color: rgb(44, 44, 89);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    color: black;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-left: 49px;
+}
+
+input {
+    width: 70%;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.buttonConvert {
+    cursor: pointer;
+    color: #fafafa;
+    margin-top: 20px;
+    margin-left: 37%;
+    width: 200px;
+    height: 35px;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    background-color: #99BB2B;
+}
+
+.buttonConvert:active {
+    transform: scale(0.98);
+}
