@@ -5,14 +5,15 @@ const Rate = () => {
 
     return (
         <div className={classes.containerRate}>
-            <div className={classes.givenCurrencyBlock}>
-                <div><select className={classes.selectGivenCurrency}></select></div>
-                <input type='number' className={classes.inputGiven}></input>
+            <div className={classes.fromCurrencyBlock}>
+                <div><select className={classes.selectFromCurrency}></select></div>
+                <input type='number' className={classes.inputFrom}></input>
             </div>
-            <div className={classes.returnedCurrencyBlock}>
-                <div><select className={classes.selectReturnedCurrency}></select></div>
-                <input type='number' className={classes.inputReturned}></input>
+            <div className={classes.toCurrencyBlock}>
+                <div><select className={classes.selectToCurrency}></select></div>
+                <input type='number' className={classes.inputTo}></input>
             </div>
+            <button className={classes.arrows}></button>
             <button className={classes.buttonConvert}>CONVERT</button>
         </div>
     )

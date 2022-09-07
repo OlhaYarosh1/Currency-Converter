@@ -1,32 +1,29 @@
 .rateUSD, .rateEUR {
+    background-color: #DDF0A1 ;
     width: 50%;
-    height: 180px;
-    border-top-left-radius: 10px;
+    height: 220px;
 }
 
 .rateEUR {
-    margin-top: -180px;
+    margin-top: -220px;
     margin-left: 50%;
+    border-top-right-radius: 10px;
 }
 
 .rateUSD {
     margin-top: 1px;
+    border-top-left-radius: 10px;
 }
 
 .usdBox, .eurBox {
     position: relative;
     width: 280px;
     height: 140px;
-    background-color: red;
+    background-color: #AAC84A;
     border-radius: 10px;
 }
 
-.usdBox {
+.usdBox, .eurBox {
     left: 50px;
-    top: 20px;
-}
-
-.eurBox {
-    left: 50px;
-    top: 20px;
+    top: 40px;
 }
