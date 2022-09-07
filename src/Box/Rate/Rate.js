@@ -5,7 +5,6 @@ const Rate = () => {
 
     return (
         <div className={classes.containerRate}>
-            <div className={classes.currentRateBlock}>Date:<br/>Rate:</div>
             <div className={classes.givenCurrencyBlock}>
                 <div><select className={classes.selectGivenCurrency}></select></div>
                 <input type='number' className={classes.inputGiven}></input>

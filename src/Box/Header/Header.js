@@ -1,12 +1,14 @@
 import React from 'react'
 import classes from './Header.module.css'
-import {FaMoneyBillAlt} from 'react-icons/fa'
 
 const Header = () => {
     return (
-        <div className={classes.heading}>
-            <div className={classes.title}>
-                <FaMoneyBillAlt className={classes.iconMoney}/>Currency Converter
+        <div>
+            <div className={classes.rateUSD}>
+                <div className={classes.usdBox}></div>
+            </div>
+            <div className={classes.rateEUR}>
+                <div className={classes.eurBox}></div>
             </div>
         </div>
     )
