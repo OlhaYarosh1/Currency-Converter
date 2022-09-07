@@ -5,7 +5,7 @@ const BASE_URL = 'https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?j
 
 const Rate = () => {
 
-    /*const select = document.querySelectorAll('.currency');
+    const select = document.querySelectorAll('.currency');
         fetch(BASE_URL)
             .then(data => data.json())
             .then((data) => {
@@ -17,24 +17,6 @@ const Rate = () => {
                 console.log(data[i]['cc']);
                 select.innerHTML += `<option value='${data[i]['cc']}'>${data[i]['cc']}</option>`;
             }
-        }*/
-
-        const[currencies, setCurrencies] = useState([])
-
-        useEffect(() => {
-            const getCurrencies = async () => {
-                const currenciesFromServer = await fetchCurrencies()
-                setCurrencies(currenciesFromServer)
-            }
-
-            getCurrencies()
-        }, [])
-
-        const fetchCurrencies = async () => {
-            const res = await fetch(BASE_URL)
-            const data = await res.json()
-
-            console.log(data)
         }
 
     return (
