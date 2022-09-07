@@ -1,18 +1,57 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import classes from './Rate.module.css'
 
+const BASE_URL = 'https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json'
+
 const Rate = () => {
+
+    /*const select = document.querySelectorAll('.currency');
+        fetch(BASE_URL)
+            .then(data => data.json())
+            .then((data) => {
+                display(data);
+            });
+
+        function display(data) {
+            for(var i = 0; i < data.length; i++) {
+                console.log(data[i]['cc']);
+                select.innerHTML += `<option value='${data[i]['cc']}'>${data[i]['cc']}</option>`;
+            }
+        }*/
+
+        const[currencies, setCurrencies] = useState([])
+
+        useEffect(() => {
+            const getCurrencies = async () => {
+                const currenciesFromServer = await fetchCurrencies()
+                setCurrencies(currenciesFromServer)
+            }
+
+            getCurrencies()
+        }, [])
+
+        const fetchCurrencies = async () => {
+            const res = await fetch(BASE_URL)
+            const data = await res.json()
+
+            console.log(data)
+        }
 
     return (
         <div className={classes.containerRate}>
             <div className={classes.fromCurrencyBlock}>
-                <div><select className={classes.selectFromCurrency}></select></div>
+                    <select name='currency' className={classes.currency}>
+                        <option value=''></option>
+                    </select>
                 <input type='number' className={classes.inputFrom}></input>
             </div>
             <div className={classes.toCurrencyBlock}>
-                <div><select className={classes.selectToCurrency}></select></div>
+                    <select name='currency' className={classes.currency}>
+                        <option value=''></option>
+                    </select>
                 <input type='number' className={classes.inputTo}></input>
             </div>
+            <div className={classes.equals}>=</div>
             <button className={classes.arrows}></button>
             <button className={classes.buttonConvert}>CONVERT</button>
         </div>

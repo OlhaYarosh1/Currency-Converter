@@ -4,6 +4,7 @@ import Header from './Header/Header'
 import Rate from './Rate/Rate'
 
 const Box = () => {
+
     return (
         <div className={classes.box}>
             <Header/>

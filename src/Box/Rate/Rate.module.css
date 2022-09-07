@@ -58,11 +58,22 @@ input:focus {
     border-color: #AAC84A;
 }
 
+.equals {
+    width: 46px;
+    height: 46px;
+    font-size: 30px;
+    color: #99BB2B;
+    text-align: center;
+    border-radius: 50%;
+    margin-left: 47%;
+    margin-top: -5px;
+}
+
 .buttonConvert {
     cursor: pointer;
     font-size: 18px;
     color: #fafafa;
-    margin-top: 120px;
+    margin-top: 25px;
     margin-left: 37%;
     width: 200px;
     height: 35px;
