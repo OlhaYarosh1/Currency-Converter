@@ -1,22 +1,25 @@
 import React from 'react'
 import classes from './Rate.module.css'
 
-const BASE_URL = 'https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json'
+fetch('https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json')
+    .then(data => data.json())
+    .then((data) => {
+        display(data)
+    })
+
+function display(data) {
+        const selectFromUAH = document.getElementById('selectFrom').innerHTML += `<option value='UAH'>UAH</option>`;
+        const selectToUAH = document.getElementById('selectTo').innerHTML += `<option value='UAH'>UAH</option>`;
+        const selectFromUSD = document.getElementById('selectFrom').innerHTML += `<option value='${data[25]['cc']}'>${data[25]['cc']}</option>`;
+        const selectToUSD = document.getElementById('selectTo').innerHTML += `<option value='${data[25]['cc']}'>${data[25]['cc']}</option>`;
+        const selectFromGBP = document.getElementById('selectFrom').innerHTML += `<option value='${data[24]['cc']}'>${data[24]['cc']}</option>`;
+        const selectToGBP = document.getElementById('selectTo').innerHTML += `<option value='${data[24]['cc']}'>${data[24]['cc']}</option>`;
+        const selectFromEUR = document.getElementById('selectFrom').innerHTML += `<option value='${data[32]['cc']}'>${data[32]['cc']}</option>`;
+        const selectToEUR = document.getElementById('selectTo').innerHTML += `<option value='${data[32]['cc']}'>${data[32]['cc']}</option>`;
+
+}  
 
 const Rate = () => {
-
-        fetch(BASE_URL)
-            .then(data => data.json())
-            .then((data) => {
-                display(data);
-            });
-
-        function display(data) {
-            for(var i = 0; i < data.length; i++) {
-                const selectFrom = document.getElementById('selectFrom').innerHTML += `<option value='${data[i]['cc']}'>${data[i]['cc']}</option>`;
-                const selectTo = document.getElementById('selectTo').innerHTML += `<option value='${data[i]['cc']}'>${data[i]['cc']}</option>`;
-            }
-        }
 
     return (
         <div className={classes.containerRate}>
@@ -34,6 +37,5 @@ const Rate = () => {
         </div>
     )
 }
-
 
 export default Rate
