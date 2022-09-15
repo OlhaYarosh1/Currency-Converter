@@ -30,7 +30,7 @@ const Rate = () => {
         }
     });
 
-    let ccs = ['UAH'];
+    let ccs = [];
     if (rates) {
         ccs = ccs.concat(rates.map((rate) => rate.cc));
     }
@@ -54,7 +54,7 @@ const Rate = () => {
     const handleToChange = (value) => {
         setTo(value);
         const rate = getRate();
-        setFrom((value * rate).toFixed(2));
+        setFrom((value / rate).toFixed(2));
     }
 
     const getOptions = () => {
