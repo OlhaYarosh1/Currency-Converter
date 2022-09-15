@@ -1,5 +1,5 @@
 .rateUSD, .rateEUR {
-    background-color: #DDF0A1 ;
+    background-color: #C3D6E8 ;
     width: 50%;
     height: 220px;
 }
@@ -19,11 +19,50 @@
     position: relative;
     width: 280px;
     height: 140px;
-    background-color: #AAC84A;
+    background-color: white;
     border-radius: 10px;
 }
 
 .usdBox, .eurBox {
     left: 50px;
     top: 40px;
+}
+
+.stringUSD, .stringEUR, .currentRateUSD, .currentRateEUR, .currentDate, .rateUAH {
+    color: #374450;
+    display: flex;
+    align-items: center;
+}
+
+.stringUSD, .stringEUR {
+    width: 90%;
+    height: 27%;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.currentRateUSD, .currentRateEUR {
+    background-color: yellow;
+    width: 50%;
+    height: 50%;
+    margin-left: 18%;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.currentDate {
+    width: 50%;
+    height: 23%;
+    margin-left: 43.5%;
+    justify-content: right;
+    font-size: 16px;
+}
+
+.rateUAH {
+    width: 22%;
+    height: 36%;
+    font-size: 30px;
+    justify-content: center;
+    margin-top: -83px;
+    margin-left: 191px;
 }
