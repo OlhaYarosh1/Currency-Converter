@@ -10,12 +10,11 @@
     width: 280px;
     height: 140px;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 15px;
     top: 40px;
 }
 
 .string, .currentRate, .currentDate, .rateUAH {
-    color: #374450;
     display: flex;
     align-items: center;
 }
@@ -48,6 +47,6 @@
     height: 36%;
     font-size: 30px;
     justify-content: center;
-    margin-top: -82px;
+    margin-top: -83.5px;
     margin-left: 191px;
 }

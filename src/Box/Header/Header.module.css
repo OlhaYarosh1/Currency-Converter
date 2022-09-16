@@ -1,13 +1,4 @@
 .boxUSD, .boxEUR {
     display: inline-flex;
-    background-color: #C3D6E8;     
     width: 50%;
-}
-
-.boxUSD {
-    border-top-left-radius: 10px;
-}
-
-.boxEUR {
-    border-top-right-radius: 10px;
 }
