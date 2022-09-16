@@ -1,41 +1,17 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import classes from './Rate.module.css'
 
-const Rate = () => {
+const Rate = ({rates}) => {
 
     const [from, setFrom] = useState();
     const [to, setTo] = useState();
-    const [rates, setRates] = useState();
     const [fromCC, setFromCC] = useState('UAH');
     const [toCC, setToCC] = useState('UAH');
-
-    const filterRates = (json) => {
-        return json.filter((item) => {
-            if (item.cc === 'USD' || item.cc === 'EUR' || item.cc === 'GBP') {
-                return true;
-            }
-            return false;
-        });
-    }
-
-    useEffect(() => {
-        if (!rates) {
-            fetch('https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json')
-                .then(data => data.json())
-                .then((data) => {
-                    let rates = [{cc: 'UAH', rate: 1.0}]
-                    rates = rates.concat(filterRates(data));
-                    setRates(rates);
-                });
-        }
-    });
 
     let ccs = [];
     if (rates) {
         ccs = ccs.concat(rates.map((rate) => rate.cc));
     }
-
-    console.log(rates)
 
     const getRate = () => {
         const rateFrom = rates.filter((rate) => rate.cc === fromCC)[0].rate;

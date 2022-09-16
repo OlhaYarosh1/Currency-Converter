@@ -1,0 +1,53 @@
+.rate {
+    width: 100%;
+    height: 220px;
+    margin-top: 1px;
+    margin-left: 50px;
+}
+
+.box {
+    position: relative;
+    width: 280px;
+    height: 140px;
+    background-color: white;
+    border-radius: 10px;
+    top: 40px;
+}
+
+.string, .currentRate, .currentDate, .rateUAH {
+    color: #374450;
+    display: flex;
+    align-items: center;
+}
+
+.string {
+    width: 90%;
+    height: 27%;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.currentRate {
+    width: 50%;
+    height: 50%;
+    margin-left: 18%;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.currentDate {
+    width: 50%;
+    height: 23%;
+    margin-left: 43.5%;
+    justify-content: right;
+    font-size: 16px;
+}
+
+.rateUAH {
+    width: 22%;
+    height: 36%;
+    font-size: 30px;
+    justify-content: center;
+    margin-top: -82px;
+    margin-left: 191px;
+}
