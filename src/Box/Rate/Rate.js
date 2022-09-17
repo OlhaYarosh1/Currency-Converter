@@ -13,7 +13,7 @@ const Rate = ({rates}) => {
         ccs = ccs.concat(rates.map((rate) => rate.cc));
     }
 
-    const getRate = () => {
+    const getRate = (fromCC, toCC) => {
         const rateFrom = rates.filter((rate) => rate.cc === fromCC)[0].rate;
         const rateTo = rates.filter((rate) => rate.cc === toCC)[0].rate;
         console.log(rateFrom);
@@ -23,13 +23,13 @@ const Rate = ({rates}) => {
 
     const handleFromChange = (value) => {
         setFrom(value);
-        const rate = getRate();
+        const rate = getRate(fromCC, toCC);
         setTo((value * rate).toFixed(2));
     }
 
     const handleToChange = (value) => {
         setTo(value);
-        const rate = getRate();
+        const rate = getRate(fromCC, toCC);
         setFrom((value / rate).toFixed(2));
     }
 
@@ -41,14 +41,14 @@ const Rate = ({rates}) => {
 
     const onFromCCChanged = (value) => {
         setFromCC(value);
-        const rate = getRate();
+        const rate = getRate(value, toCC);
         setTo((from * rate).toFixed(2));
     }
 
     const onToCCChanged = (value) => {
         setToCC(value);
-        const rate = getRate();
-        setFrom((value * rate).toFixed(2));
+        const rate = getRate(fromCC, value);
+        setFrom((to / rate).toFixed(2));
     }
 
     return (

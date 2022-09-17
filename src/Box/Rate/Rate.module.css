@@ -20,9 +20,9 @@
 
 .selectFrom, .selectTo {
     width: 20%;
-    height: 35.4px;
+    height: 34.7px;
     background-color: white;
-    border: 2.2px solid;
+    border: 2px solid;
     border-color: transparent;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -35,7 +35,7 @@
 
 select:focus {
     border-color: black;
-    height: 37px;
+    height: 38px;
 }
 
 input {
@@ -45,7 +45,7 @@ input {
     margin-left: 50px;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    border: 2.35px solid;
+    border: 2px solid;
     border-color: transparent;
     font-size: 18px;
     outline: none;
@@ -54,6 +54,8 @@ input {
 
 input:focus {
     border-color: black;
+    height: 32.5px;
+    margin-top: 8.6px;
 }
 
 input:focus::placeholder {
