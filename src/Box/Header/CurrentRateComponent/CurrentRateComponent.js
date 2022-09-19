@@ -3,7 +3,7 @@ import classes from './CurrentRateComponent.module.css'
 
 const CurrentRateComponent = ({currency, date, rate, className}) => {
 
-    const fullClassName = classes.container + ' ' + className;
+    const fullClassName = ' ' + className;
     return (
         <div className={fullClassName}>
             <div className={classes.rate}>
