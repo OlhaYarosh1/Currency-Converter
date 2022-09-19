@@ -14,3 +14,6 @@ This is a simple, fast and efficient way to convert currency from UAH to USD, EU
 
 ## Model
 ![model](public/docs/model.png)
+
+## Diagram
+![diagram](public/docs/diagram.png)
