@@ -1,4 +1,4 @@
-import Box from './Box/Box'
+import Box from './components/Box/Box'
 
 function App() {
 

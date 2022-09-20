@@ -4,12 +4,13 @@ import classes from './CurrentRateComponent.module.css'
 const CurrentRateComponent = ({currency, date, rate, className}) => {
 
     const fullClassName = ' ' + className;
+
     return (
         <div className={fullClassName}>
             <div className={classes.rate}>
                 <div className={classes.box}>
                     <div className={classes.string}>
-                        1 {currency} is equivalent to 
+                        1 {currency} is equivalent to
                     </div>
                     <div className={classes.currentRate}>
                         {rate}

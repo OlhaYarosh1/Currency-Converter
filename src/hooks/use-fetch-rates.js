@@ -1,22 +1,22 @@
 import {useState, useEffect} from 'react'
 
-const useFetch = () => {
+const useFetchRates = () => {
 
     const [rates, setRates] = useState();
-    let [rateUSD, setRateUSD] = useState('');
-    let [rateEUR, setRateEUR] = useState('');
-    let [exchangeDate, setExchangeDate] = useState('');
-
-    const filterRates = (json) => {
-        return json.filter((item) => {
-            if (item.cc === 'USD' || item.cc === 'EUR' || item.cc === 'GBP') {
-                return true;
-            }
-            return false;
-        });
-    }
+    const [rateUSD, setRateUSD] = useState('');
+    const [rateEUR, setRateEUR] = useState('');
+    const [exchangeDate, setExchangeDate] = useState('');
 
     useEffect(() => {
+
+        const filterRates = (json) => {
+            return json.filter((item) => {
+                if (item.cc === 'USD' || item.cc === 'EUR' || item.cc === 'GBP') {
+                    return true;
+                }
+                return false;
+            });
+        }
 
         fetch('https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json')
         .then(data => data.json())
@@ -31,9 +31,9 @@ const useFetch = () => {
             setRateUSD(rateUSD.rate.toFixed(2));
             setRates(rates);
         });
-    }, 'https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json')
+    }, []);
         
         return [rates, rateUSD, rateEUR, exchangeDate];
 }
 
-export default useFetch
+export default useFetchRates

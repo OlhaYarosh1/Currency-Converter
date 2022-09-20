@@ -2,11 +2,11 @@ import React from 'react'
 import classes from './Box.module.css'
 import Header from './Header/Header'
 import Rate from './Rate/Rate'
-import useFetch from './useFetch/useFetch'
+import useFetchRates from '../../hooks/use-fetch-rates'
 
 const Box = () => {
 
-    const [rates, rateUSD, rateEUR, exchangeDate] = useFetch('https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json')
+    const [rates, rateUSD, rateEUR, exchangeDate] = useFetchRates();
 
     return (
         <div className={classes.box}>
