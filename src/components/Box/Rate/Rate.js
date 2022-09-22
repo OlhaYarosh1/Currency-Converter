@@ -1,7 +1,7 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import classes from './Rate.module.css'
 
-const Rate = ({rates}) => {
+const Rate = ({ rates }) => {
 
     const [from, setFrom] = useState();
     const [to, setTo] = useState();
@@ -18,7 +18,7 @@ const Rate = ({rates}) => {
         const rateTo = rates.filter((rate) => rate.cc === toCC)[0].rate;
         console.log(rateFrom);
         console.log(rateTo);
-        return rateFrom/rateTo;
+        return rateFrom / rateTo;
     }
 
     const handleFromChange = (value) => {
@@ -58,7 +58,7 @@ const Rate = ({rates}) => {
                     value={from}
                     onChange={(e) => handleFromChange(e.target.value)}
                 ></input>
-                <select 
+                <select
                     className={classes.selectFrom}
                     onChange={(e) => onFromCCChanged(e.target.value)}
                     value={fromCC}

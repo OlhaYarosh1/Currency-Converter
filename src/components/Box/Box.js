@@ -3,7 +3,7 @@ import classes from './Box.module.css'
 import Header from './Header/Header'
 import Rate from './Rate/Rate'
 import useFetchRates from '../../hooks/use-fetch-rates'
-import { batch ,useDispatch } from 'react-redux'
+import { batch, useDispatch } from 'react-redux'
 import { rateActions } from '../../store/rates-slice'
 
 const Box = () => {
@@ -16,8 +16,8 @@ const Box = () => {
     })
     return (
         <div className={classes.box}>
-            <Header date={exchangeDate} rateUSD={rateUSD} rateEUR={rateEUR}/>
-            <Rate rates={rates}/>
+            <Header date={exchangeDate} rateUSD={rateUSD} rateEUR={rateEUR} />
+            <Rate rates={rates} />
         </div>
     )
 }

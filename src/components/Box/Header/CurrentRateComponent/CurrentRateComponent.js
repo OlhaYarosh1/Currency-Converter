@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from './CurrentRateComponent.module.css'
 
-const CurrentRateComponent = ({currency, date, rate, className}) => {
+const CurrentRateComponent = ({ currency, date, rate, className }) => {
 
     const fullClassName = ' ' + className;
 
